@@ -1,4 +1,6 @@
 console.log('Задача 1');
+console.log('...')
+
 
 console.log('Решаем через if');
 let lang = prompt("Какой язык у сайта?");
@@ -20,13 +22,19 @@ switch (lang) {
 
 console.log('Решаем через многомерный массив без ифов и switch.');
 let choose = lang;
-let array = [];
-
-array['ru'] = ['Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье'];
-array['en'] = ['Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday'];
+let array = [
+	'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье',
+	'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday'
+];
+array['ru'] = array[0] ;
+array['en'] = array[1] ;
 
 console.log(array[choose]);
 
+
+
+console.log('...')
+/////////////////////////////
 console.log('Задача 2');
 
 let namePerson = prompt('Введите имя');
