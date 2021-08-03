@@ -1,42 +1,34 @@
 
-let array = [
-	'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье',
-	'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday'
-];
 
 console.log('Задача 1');
 console.log('...')
 
+let map = new Map();
+map.set('ru', 'Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+map.set('en', 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday');
+
+let obj = Object.fromEntries(map.entries()); 
+
 console.log('Решаем через if');
 let lang = prompt("Какой язык у сайта?");
 if (lang == "ru") {
-	console.log( array[0] );
+	console.log(obj.ru);
 } else if (lang == "en") {
-	console.log( array[1] );
+	console.log(obj.en);
 }
 
 console.log('Решаем через switch-case');
 switch (lang) {
 	case "ru":
-		console.log( array[0] );
+		console.log(obj.ru);
 		break;
 	case "en":
-		console.log (array[1] );
+		console.log(obj.en);
 		break;
 }
 
-console.log('Решаем через многомерный массив без ифов и switch.');
-let choose = lang;
-
-array['ru'] = array[0] ;
-array['en'] = array[1] ;
-
-console.log(array[choose]);
-
-
 
 console.log('...')
-/////////////////////////////
 console.log('Задача 2');
 
 let namePerson = prompt('Введите имя');
